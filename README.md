@@ -3,7 +3,7 @@
 ## Anggota
 1. [Faturrahman M.](https://github.com/adadeeeh) 05111540000027
 2. [Barep Bimo Pangestu](https://github.com/bosmobosmo) 05111540000112
-3. Dias Adhi Pratama 05111540000173
+3. [Dias Adhi Pratama](https://github.com/yaskeee) 05111540000173
 
 ## Kriteria Aplikasi
 1. Memberikan solusi terhadap problem tertentu
