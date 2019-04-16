@@ -20,3 +20,6 @@
 ## Deskripsi
 1. Sebuah halaman utama yang menampilkan nama beasiswa yang sedang membuka pendaftaran.
 2. Sebuah halaman yang menampilkan detail beasiswa yang sedang membuka pendaftaran.
+
+## Sitemap
+![sitemap](img/sitemap.png)
