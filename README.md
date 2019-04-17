@@ -21,5 +21,20 @@
 1. Sebuah halaman utama yang menampilkan nama beasiswa yang sedang membuka pendaftaran.
 2. Sebuah halaman yang menampilkan detail beasiswa yang sedang membuka pendaftaran.
 
+## Use Case Aplikasi
+### Aktor
+1. Admin
+2. Mahasiswa
+
+### Use Case
+1. **Admin Login** : Login sebagai admin
+2. **Add Beasiswa** : Menambahkan Postingan Beasiswa
+3. **Edit Beasiswa** : Mengubah Postingan Beasiswa
+4. **View Beasiswa** : Melihat Postingan Beasiswa
+
+### Use Case Diagram
+![diagram](img/UseCase.PNG)
+
+
 ## Sitemap
 ![sitemap](img/sitemap.png)
