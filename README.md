@@ -38,3 +38,25 @@
 
 ## Sitemap
 ![sitemap](img/sitemap.png)
+
+## Screenshot Page
+### Halaman Homepage
+![homepage](screenshot page/Homepage.PNG)
+
+### Halaman Login Admin
+![login admin](screenshot_page/Login Admin.PNG)
+
+### Halaman Homepage Admin
+![home admin](screenshot page/Admin Page.PNG)
+
+### Halaman Add Beasiswa
+![add beasiswa](screenshot page/Add Beasiswa(Admin).PNG)
+
+### Halaman View Beasiswa(Admin)
+![view admin](screenshot page/View Beasiswa(Admin).PNG)
+
+### Halaman Edit Beasiswa(Admin)
+![edit beasiswa](screenshot page/Edit Beasiswa(Admin).PNG)
+
+### Halaman View Beasiswa(Mahasiswa)
+![view beasiswa](screenshot page/View Beasiswa(Mahasiswa).PNG)
