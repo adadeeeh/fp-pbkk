@@ -41,22 +41,22 @@
 
 ## Screenshot Page
 ### Halaman Homepage
-![homepage](screenshot page/Homepage.PNG)
+![homepage](screenshot/Homepage.PNG)
 
 ### Halaman Login Admin
-![login admin](screenshot_page/Login Admin.PNG)
+![login admin](screenshot/Login_Admin.PNG)
 
 ### Halaman Homepage Admin
-![home admin](screenshot page/Admin Page.PNG)
+![home admin](screenshot/Admin_Page.PNG)
 
 ### Halaman Add Beasiswa
-![add beasiswa](screenshot page/Add Beasiswa(Admin).PNG)
+![add beasiswa](screenshot/Add_Beasiswa(Admin).PNG)
 
 ### Halaman View Beasiswa(Admin)
-![view admin](screenshot page/View Beasiswa(Admin).PNG)
+![view admin](screenshot/View_Beasiswa(Admin).PNG)
 
 ### Halaman Edit Beasiswa(Admin)
-![edit beasiswa](screenshot page/Edit Beasiswa(Admin).PNG)
+![edit beasiswa](screenshot/Edit_Beasiswa(Admin).PNG)
 
 ### Halaman View Beasiswa(Mahasiswa)
-![view beasiswa](screenshot page/View Beasiswa(Mahasiswa).PNG)
+![view beasiswa](screenshot/View_Beasiswa(Mahasiswa).PNG)
