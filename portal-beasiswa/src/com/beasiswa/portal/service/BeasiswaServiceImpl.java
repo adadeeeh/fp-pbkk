@@ -23,4 +23,11 @@ public class BeasiswaServiceImpl implements BeasiswaService {
 		return beasiswaDAO.getBeasiswas();
 	}
 
+	@Override
+	@Transactional
+	public void saveBeasiswa(Beasiswa theBeasiswa) {
+		
+		beasiswaDAO.saveBeasiswa(theBeasiswa);
+	}
+
 }

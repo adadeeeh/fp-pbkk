@@ -33,4 +33,14 @@ public class BeasiswaDAOImpl implements BeasiswaDAO {
 		return beasiswas;
 	}
 
+	@Override
+	public void saveBeasiswa(Beasiswa theBeasiswa) {
+
+		//get hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		//save beasiswa
+		currentSession.save(theBeasiswa);
+	}
+
 }

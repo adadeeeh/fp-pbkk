@@ -28,7 +28,7 @@ CREATE TABLE `beasiswa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `judul` varchar(45) DEFAULT NULL,
   `poster` TEXT DEFAULT NULL,
-  `syarat_ketentuan` TEXT DEFAULT NULL,
+  `syarat_ketentuan` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -40,7 +40,7 @@ CREATE TABLE `beasiswa` (
 LOCK TABLES `beasiswa` WRITE;
 
 INSERT INTO `beasiswa` VALUES 
-	(1,'PPA','Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Mahasiswa');
+	(1,'PPA','', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
 
 /*!40000 ALTER TABLE `beasiswa` ENABLE KEYS */;
 UNLOCK TABLES;
