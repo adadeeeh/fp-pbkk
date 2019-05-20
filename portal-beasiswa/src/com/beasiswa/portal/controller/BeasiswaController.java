@@ -34,16 +34,16 @@ public class BeasiswaController {
 		return "list-beasiswa";
 	}
 	
-	/*
-	 * @GetMapping("/form") public String form(Model themodel) {
-	 * 
-	 * //create model attribute to bind form data Beasiswa theBeasiswa = new
-	 * Beasiswa();
-	 * 
-	 * themodel.addAttribute("beasiswa", theBeasiswa);
-	 * 
-	 * return "beasiswa-form"; }
-	 */
+
+	@GetMapping("/form") public String form(Model themodel) {
+	
+	//create model attribute to bind form data
+	Beasiswa theBeasiswa = new Beasiswa();
+	
+	themodel.addAttribute("beasiswa", theBeasiswa);
+	
+	return "beasiswa-form"; }
+	
 	
 	@PostMapping("/saveBeasiswa")
 	public String saveBeasiswa(@ModelAttribute("beasiswa") Beasiswa theBeasiswa) {
