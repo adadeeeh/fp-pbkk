@@ -58,7 +58,6 @@ public class BeasiswaDAOImpl implements BeasiswaDAO {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		//delete object with pk
 		Query theQuery = currentSession.createQuery("delete from Beasiswa where id=:id");
 		theQuery.setParameter("id", theId);
 		

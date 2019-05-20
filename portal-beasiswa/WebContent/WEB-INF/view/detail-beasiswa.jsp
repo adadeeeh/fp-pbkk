@@ -23,32 +23,30 @@
             </div>
 		</nav>
 		<div class="jumbotron jumbotron-fluid">
-		  <div class="container">
-		  	<c:forEach var="tempBeasiswa" items="${beasiswas}">
-		  	
-			  	<c:url var="detailLink" value="/beasiswa/detailBeasiswa">
-			   		<c:param name="id" value="${tempBeasiswa.id }"></c:param>
+		  <div class="container">		  		
+		
+			   	<c:url var="updateLink" value="/beasiswa/formUpdate">
+			   		<c:param name="id" value="${beasiswa.id }"></c:param>
 			   	</c:url>
 			   	
-			   	<h1 class="display-8">${tempBeasiswa.judul}</h1>
-<%-- 		    	<img style="width:100%" alt="${tempBeasiswa.poster}" src="${tempBeasiswa.poster}"> --%>
-		    	<p>${tempBeasiswa.syaratKetentuan}<p>
+			   	<c:url var="deleteLink" value="/beasiswa/delete">
+			   		<c:param name="id" value="${beasiswa.id }"></c:param>
+			   	</c:url>
+			   	
+			   	<h1 class="display-8">${beasiswa.judul}</h1>
+<%-- 		    	<img style="width:100%" alt="${tempBeasiswa.poster}" src="${beasiswa.poster}"> --%>
+		    	<p>${beasiswa.syaratKetentuan}<p>
 		    	
-		    	<a href="${detailLink}">Detail</a>
+		    	
+		    	<a href="${updateLink}">Update</a>
+		    	<a href="${deleteLink}"
+		    		onclick="if (!(confirm('Are you sure you want to delete this?'))) return false">Delete</a> 
 		    	
 		    	<hr />
-		    </c:forEach>
 		  </div>
 		</div>
 	</div>
 	
-	<%-- ${beasiswa.judul}
-	
-	${beasiswa.poster}
-	
-	
-	${beasiswa.syaratKetentuan} --%>
-
 </body>
 
 </html>
