@@ -5,24 +5,25 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.beasiswa.portal.dao.BeasiswaDAO;
 import com.beasiswa.portal.entity.Beasiswa;
+import com.beasiswa.portal.service.BeasiswaService;
 
 @Controller
 @RequestMapping("/beasiswa")
 public class BeasiswaController {
 
-	//inject beasiswa dao
+	//inject beasiswa service
 	@Autowired
-	private BeasiswaDAO beasiswaDAO;
+	private BeasiswaService beasiswaService;
 	
-	@RequestMapping("/list")
+	@GetMapping("/list")
 	public String listBeasiswa(Model theModel) {
 		
 		//get beasiswas from dao
-		List<Beasiswa> theBeasiswas = beasiswaDAO.getBeasiswas();
+		List<Beasiswa> theBeasiswas = beasiswaService.getBeasiswas();
 		
 		//add beasiswas to the model
 		theModel.addAttribute("beasiswas", theBeasiswas);
