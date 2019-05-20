@@ -1,0 +1,1 @@
+<% response.sendRedirect("beasiswa/list"); %>
