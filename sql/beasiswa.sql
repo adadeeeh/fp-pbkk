@@ -38,10 +38,9 @@ CREATE TABLE `beasiswa` (
 --
 
 LOCK TABLES `beasiswa` WRITE;
-/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
 
 INSERT INTO `beasiswa` VALUES 
-	(1,'PPA','Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+	(1,'PPA','Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Mahasiswa');
 
 /*!40000 ALTER TABLE `beasiswa` ENABLE KEYS */;
 UNLOCK TABLES;
