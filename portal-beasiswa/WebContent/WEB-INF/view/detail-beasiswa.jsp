@@ -1,4 +1,5 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="security" url="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html>
@@ -37,10 +38,12 @@
 <%-- 		    	<img style="width:100%" alt="${tempBeasiswa.poster}" src="${beasiswa.poster}"> --%>
 		    	<p>${beasiswa.syaratKetentuan}<p>
 		    	
-		    	
+		    	<security:authorize access="hasRole('ADMIN')">
 		    	<a href="${updateLink}">Update</a>
 		    	<a href="${deleteLink}"
-		    		onclick="if (!(confirm('Are you sure you want to delete this?'))) return false">Delete</a> 
+		    		onclick="if (!(confirm('Are you sure you want to delete this?'))) return false">Delete</a>
+		    		
+		    	</security:authorize> 
 		    	
 		    	<hr />
 		  </div>
