@@ -26,41 +26,33 @@
 		  <div class="container">
 		  	<c:forEach var="tempBeasiswa" items="${beasiswas}">
 		    	<h1 class="display-8">${tempBeasiswa.judul}</h1>
-		    	<img style="width:100%" alt="${tempBeasiswa.poster}" src="${tempBeasiswa.poster}">
+<%-- 		    	<img style="width:100%" alt="${tempBeasiswa.poster}" src="${tempBeasiswa.poster}"> --%>
+		    	<p>${tempBeasiswa.syaratKetentuan}<p>
+		    	
+		    	<c:url var="updateLink" value="/beasiswa/formUpdate">
+			   		<c:param name="id" value="${tempBeasiswa.id }"></c:param>
+			   	</c:url>
+			   	
+			   	<c:url var="deleteLink" value="/beasiswa/delete">
+			   		<c:param name="id" value="${tempBeasiswa.id }"></c:param>
+			   	</c:url>
+			   	
+		    	<a href="${updateLink}">Update</a>
+		    	<a href="${deleteLink}"
+		    		onclick="if (!(confirm('Are you sure you want to delete this?'))) return false">Delete</a> 
+		    	
+		    	<hr />
 		    </c:forEach>
-    		<!-- <a href="hobbit/showForm"><button type="button" class="btn btn-success">Register Hobbit</button></a> -->
 		  </div>
 		</div>
 	</div>
-	<%-- <div id="wrapper">
-		<div id="header">
-			<h2>Daftar beasiswa</h2>
-		</div>
-	</div>
 	
-	<div id="container">
-		<div id="contetnt">
-		
-			<table>
-				<tr>
-					<th>Judul</th>
-					<th>Poster</th>
-					<th>Syarat dan Ketentuan</th>
-				</tr>
-		
-				<c:forEach var="tempBeasiswa" items="${beasiswas}">
-					
-					<tr>
-						<td>${tempBeasiswa.judul}</td>
-						<td>${tempBeasiswa.poster}</td>
-						<td>${tempBeasiswa.syaratKetentuan}</td>
-					</tr>
-					
-				</c:forEach>
-			</table>
-		
-		</div>
-	</div> --%>
+	${beasiswa.judul}
+	
+	${beasiswa.poster}
+	
+	
+	${beasiswa.syaratKetentuan}
 
 </body>
 

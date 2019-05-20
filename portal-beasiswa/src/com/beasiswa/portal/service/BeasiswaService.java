@@ -9,4 +9,8 @@ public interface BeasiswaService {
 	public List<Beasiswa> getBeasiswas();
 	
 	public void saveBeasiswa(Beasiswa theBeasiswa);
+
+	public Beasiswa getBeasiswa(int theId);
+
+	public void deleteBeasiswa(int theId);
 }

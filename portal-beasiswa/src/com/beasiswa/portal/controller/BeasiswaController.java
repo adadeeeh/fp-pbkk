@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.beasiswa.portal.entity.Beasiswa;
 import com.beasiswa.portal.service.BeasiswaService;
@@ -52,4 +53,43 @@ public class BeasiswaController {
 		
 		return "redirect:/beasiswa/list";
 	}
+	
+	@GetMapping("/formUpdate")
+	public String formUpdate(@RequestParam("id") int theId, Model theModel) {
+		
+		//get beasiswa
+		Beasiswa theBeasiswa = beasiswaService.getBeasiswa(theId);
+		
+		//set beasiswa as a model attribute
+		theModel.addAttribute("beasiswa", theBeasiswa);
+		
+		//send form
+		return "beasiswa-form";
+	}
+	
+	@GetMapping("/delete")
+	public String deleteBeasiswa(@RequestParam("id") int theId) {
+		
+		beasiswaService.deleteBeasiswa(theId);
+		
+		return "redirect:/beasiswa/list";
+	}
+	
+	
+	/*
+	 * @RequestMapping("/showForm") public String showForm(Model theModel) {
+	 * 
+	 * //create hobbit object Beasiswa theBeasiswa = new Beasiswa();
+	 * 
+	 * //add hobbit object to the model theModel.addAttribute("beasiswa",
+	 * theBeasiswa);
+	 * 
+	 * return "beasiswa-form"; }
+	 * 
+	 * @RequestMapping("/processForm") public String
+	 * processForm(@ModelAttribute("beasiswa") Beasiswa theBeasiswa) {
+	 * 
+	 * return "list-beasiswa"; }
+	 */
+	 
 }

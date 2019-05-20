@@ -26,6 +26,9 @@
 		<div class="jumbotron jumbotron-fluid">
 		  <div class="container">
 		  	<form:form action="saveBeasiswa" modelAttribute="beasiswa" method="POST">
+		  	
+		  		<form:hidden path="id"/>
+		  	
 			  	<div class="col-sm-10 mx-auto">
 			  		<div class="form-group row">
 	                   	<label for="name" class="col-3 col-form-label">Judul</label>
@@ -34,17 +37,17 @@
 	                   	</div>
 	               	</div>
 	               	
-	               	<!-- <div class="form-group row">
+	               	<div class="form-group row">
 	                   	<label for="name" class="col-3 col-form-label">Poster</label>
 	                   	<div class="col-8">
-		                   	<input type="file" path="poster">
+		                   	<form:input type="file" path="poster"/>
 	                   	</div>
-	               	</div> -->
+	               	</div>
 	               	
 	               	<div class="form-group row">
 	                   	<label for="name" class="col-3 col-form-label">Syarat dan Ketentuan</label>
 	                   	<div class="col-8">
-	                   		<textarea class="form-control" rows="3" path="syaratKetentuan"></textarea>
+	                   		<form:textarea class="form-control" path="syaratKetentuan"/>
 	                   	</div>
 	               	</div>
 	               	

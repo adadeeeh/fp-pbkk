@@ -1,5 +1,7 @@
 package com.beasiswa.portal.entity;
 
+import java.util.Arrays;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +22,7 @@ public class Beasiswa {
 	private String judul;
 	
 	@Column(name="poster")
-	private String poster;
+	private byte[] poster;
 	
 	@Column(name="syarat_ketentuan")
 	private String syaratKetentuan;
@@ -37,11 +39,11 @@ public class Beasiswa {
 		this.id = id;
 	}
 
-	public String getPoster() {
+	public byte[] getPoster() {
 		return poster;
 	}
 
-	public void setPoster(String poster) {
+	public void setPoster(byte[] poster) {
 		this.poster = poster;
 	}
 
@@ -63,8 +65,8 @@ public class Beasiswa {
 
 	@Override
 	public String toString() {
-		return "Beasiswa [id=" + id + ", judul=" + judul + ", poster=" + poster + ", syaratKetentuan=" + syaratKetentuan
-				+ "]";
+		return "Beasiswa [id=" + id + ", judul=" + judul + ", poster=" + Arrays.toString(poster) + ", syaratKetentuan="
+				+ syaratKetentuan + "]";
 	}
 	
 	

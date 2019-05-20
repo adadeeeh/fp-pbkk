@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `beasiswa`;
 CREATE TABLE `beasiswa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `judul` varchar(45) DEFAULT NULL,
-  `poster` TEXT DEFAULT NULL,
+  `poster` BLOB DEFAULT NULL,
   `syarat_ketentuan` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;

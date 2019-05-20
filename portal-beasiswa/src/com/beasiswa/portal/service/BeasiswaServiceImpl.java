@@ -30,4 +30,18 @@ public class BeasiswaServiceImpl implements BeasiswaService {
 		beasiswaDAO.saveBeasiswa(theBeasiswa);
 	}
 
+	@Override
+	@Transactional
+	public Beasiswa getBeasiswa(int theId) {
+		
+		return beasiswaDAO.getBeasiswa(theId);
+	}
+
+	@Override
+	@Transactional
+	public void deleteBeasiswa(int theId) {
+
+		beasiswaDAO.deleteBeasiswa(theId);
+	}
+
 }

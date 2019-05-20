@@ -39,8 +39,30 @@ public class BeasiswaDAOImpl implements BeasiswaDAO {
 		//get hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		//save beasiswa
-		currentSession.save(theBeasiswa);
+		//save or update beasiswa
+		currentSession.saveOrUpdate(theBeasiswa);
+	}
+
+	@Override
+	public Beasiswa getBeasiswa(int theId) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		Beasiswa theBeasiswa = currentSession.get(Beasiswa.class, theId);
+		
+		return theBeasiswa;
+	}
+
+	@Override
+	public void deleteBeasiswa(int theId) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		//delete object with pk
+		Query theQuery = currentSession.createQuery("delete from Beasiswa where id=:id");
+		theQuery.setParameter("id", theId);
+		
+		theQuery.executeUpdate();
 	}
 
 }
